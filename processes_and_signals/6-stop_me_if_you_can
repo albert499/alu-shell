@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
-# kills the infinity and beyong program using sigkill signal
 
-# Terminate the infinate process
-pkill -15 "bash ./4-to_infinity_and_beyong" -f
+# Check if the process is running
+if pgrep -x "4-to_infinity_and_beyond" > /dev/null
+then
+    # If running, stop the process
+    pkill -x "4-to_infinity_and_beyond"
+    echo "Process '4-to_infinity_and_beyond' has been stopped."
+else
+    echo "Process '4-to_infinity_and_beyond' is not running."
+fi
