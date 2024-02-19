@@ -1,7 +1,20 @@
 #!/usr/bin/env bash
-# this script gives you information about the holbertonschool file
-# Your Bash script should check if the file exists and print:
-# if the file exists: holbertonschool file exists
-# if the file does not exist: holbertonschool file does not exist
-# If the file exists, print:
+# Displays information about the `school` file. 
 
+if [ -e "school" ]
+then
+  echo "school file exists"
+  if [ -s "school" ]
+  then
+    echo "school file is not empty"
+  else
+    echo "school file is empty"
+  fi
+
+  if [ -f "school" ]
+  then
+    echo "school is a regular file"
+  fi
+else
+  echo "school file does not exist"
+fi
