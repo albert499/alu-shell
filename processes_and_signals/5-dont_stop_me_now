@@ -1,11 +1,7 @@
 #!/usr/bin/env bash
-# kills the infinity and beyong program using sigkill signal
-
-# Get the pid of the program
-id=$(pgrep "bash ./4-to_infinity_and_beyong" -f)
-
-# Terminate the infinate process
-if [ -n "$id" ]
-then
- kill -15 "$id"
-fi
+# This script displays a statement indefinitely
+while [ true ]; do
+while true; do
+    echo "To infinity and beyond"
+    sleep 2
+done
